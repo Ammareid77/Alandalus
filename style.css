@@ -102,30 +102,45 @@ body {
   overflow: hidden;
 }
 
+/* عدل الجزء ده في الـ CSS */
+/* ===== SLIDER ===== */
+.slider {
+    position: relative;
+    max-width: 90%;
+    margin: auto;
+    overflow: hidden; /* يمنع ظهور الصور الخارجة عن النطاق */
+    border-radius: 15px;
+}
+
 .slides {
-  display: flex;
-  transition: transform 0.5s ease;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    direction: ltr; /* لضمان حساب الحركة بشكل صحيح برمجياً */
 }
 
 .slides img {
-  width: 100%;
-  border-radius: 15px;
+    flex: 0 0 100%; /* كل صورة تاخد 100% من العرض */
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
 }
 
 .slide-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  font-size: 25px;
-  padding: 10px;
-  cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
 }
 
-.left { right: 10px; }
-.right { left: 10px; }
+/* تعديل أماكن الزراير لتناسب الاتجاه */
+.left { left: 10px; }
+.right { right: 10px; }
 
 /* ===== OFFER ===== */
 .offer-box {
