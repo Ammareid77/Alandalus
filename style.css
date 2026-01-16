@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: #f5f5f5;
+  color: #111;
+  direction: rtl;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #7a0c0c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 25px;
+  z-index: 1000;
+}
+
+/* LEFT (LOGO) */
+.header-left {
+  width: 20%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.logo {
+  width: 100px;
+}
+
+/* CENTER (TITLE + NAV) */
+.header-center {
+  width: 60%;
+  text-align: center;
+}
+
+.brand-name {
+  font-family: 'DiwaniOutline',sans-serif;
+  font-size: 30px;
+  margin: 0;
+  color: white;
+}
+
+/* NAV UNDER TITLE */
+.nav-links {
+  margin-top: 5px;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #a8e6cf; /* أخضر راقي */
+}
+
+/* RIGHT (EMPTY / FUTURE) */
+.header-right {
+  width: 20%;
+}
+
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+.section-title {
+  font-family:'Cairo';
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.section-title:hover {
+    color:#7a0c0c;
+}
+
+.dark {
+  background: #0f3d2e;
+}
+
+.white {
+  color: white;
+}
+
+/* ===== SLIDER ===== */
+.slider {
+  position: relative;
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 25px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.left { right: 10px; }
+.right { left: 10px; }
+
+/* ===== OFFER ===== */
+.offer-box {
+  background: white;
+  color: #7a0c0c;
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  animation: pulse 2s infinite;
+}
+
+
+
+
+#offers {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* يجعل المحتوى يبدأ من أعلى */
+  align-items: center;
+  padding: 20px 20px;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* يجعل المحتوى يبدأ من أعلى */
+  align-items: center;
+  padding: 20px 20px;
+}
+
+
+
+
+
+
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ===== ABOUT ===== */
+.about-text {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #000000;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+
+  padding: 20px 40px;
+}
+
+.footer-right img {
+  width: 200px;
+  padding-top: 50px;
+}
+
+.footer-left a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 25px;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  direction: ltr;
+  unicode-bidi: embed;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'DiwaniOutline';
+    src: url("C:\Users\ammar\Alandalus\Fonts\ArbFONTS-48Diwani-Simple-Outline.tff");
+}
+@font-face {
+    font-family: 'al-mohanad';
+    src: url("C:\Users\ammar\Alandalus\Fonts\al-mohanad.tff");
+}
+@font-face {
+    font-family: 'Aljazeera';
+    src: url("C:\Users\ammar\Alandalus\Fonts\Aljazeera.tff");
+}
+
+
+
+
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  color: #ffffff;
+
+  /* ظل نص جميل */
+  text-shadow:
+    2px 2px 4px rgba(0,0,0,0.7),  /* ظل أساسي */
+    0 0 8px #a8e6cf;               /* glow أخضر فاتح */
+
+  /* Stroke (حدود للنص) */
+  -webkit-text-stroke: 1px #ffffff; /* حدود سوداء دقيقة */
+  -webkit-font-smoothing: antialiased;
+
+  /* Optional: Gradient على النص */
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* transition عند hover */
+  transition: all 0.3s ease;
+}
+
+/* Hover effect – يكبر ويزود الglow */
+.brand-name:hover {
+  transform: scale(1.05);
+  text-shadow:
+    2px 2px 6px rgba(0,0,0,0.8),
+    0 0 12px #a8e6cf;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .header {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  .brand-name {
+    font-size: 30px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+  }
+
+  .footer-right img {
+    width: 100px;
+  }
+
+  .footer-left {
+    flex-shrink: 0;
+    font-size: 15px;
+  }
+  .copyright {
+    font-size: 8px;
+  }
+}
+
+
+
